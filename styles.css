@@ -1,0 +1,153 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #f2f2f2, #e0eafc);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px; /* Increased width */
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 2.2em;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.input-group {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping */
+    gap: 10px;
+    margin-bottom: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+input[type="text"] {
+    flex: 2;
+    min-width: 250px; /* Ensure proper minimum width */
+    padding: 15px;
+    border: 2px solid #4a90e2;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus {
+    border-color: #357abd;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    outline: none;
+}
+
+input[type="date"], input[type="time"] {
+    padding: 15px;
+    border: 2px solid #4a90e2;
+    border-radius: 8px;
+    font-size: 16px;
+    min-width: 130px; /* Ensure enough width */
+    box-sizing: border-box;
+}
+
+button {
+    padding: 15px 25px;
+    border: none;
+    background: #4a90e2;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background: #357abd;
+    transform: scale(1.05);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the start */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s, transform 0.2s;
+    position: relative;
+}
+
+li:hover {
+    background: #f9f9f9;
+    transform: scale(1.02);
+}
+
+li.completed {
+    background: #d4edda;
+    text-decoration: line-through;
+    color: #6c757d;
+}
+
+li .checkbox {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+li .date-time {
+    font-size: 0.9em;
+    color: #888;
+    text-align: left; /* Align text to left */
+    width: 100%; /* Use full width */
+    word-wrap: break-word; /* Ensure long texts wrap */
+    margin-top: 5px; /* Add spacing above */
+}
+
+li span {
+    flex: 1;
+    text-align: left;
+}
+
+button.remove-btn {
+    background: #e94e77;
+    padding: 10px 15px;
+}
+
+button.remove-btn:hover {
+    background: #d43f60;
+}
+
+button.remove-btn, button.remove-btn:focus {
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+/* Drag-and-drop styling */
+.dragging {
+    opacity: 0.5;
+}
+
+.drag-over {
+    border: 2px dashed #4a90e2;
+}
